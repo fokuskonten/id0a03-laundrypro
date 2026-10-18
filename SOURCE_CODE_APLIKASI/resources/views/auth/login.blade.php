@@ -35,8 +35,8 @@
             <div class="card flex-row border-0 shadow-lg rounded-4 overflow-hidden">
                 <!-- The image half -->
                 <div class="col-md-6 d-none d-md-flex bg-image flex-column justify-content-center align-items-center text-center p-5 text-white">
-                    <div class="bg-white rounded-4 p-3 shadow-lg mb-3 d-inline-flex justify-content-center align-items-center" style="max-width: 170px;">
-                        <img src="{{ asset('logo.png') }}" alt="LaundryPro Logo" class="img-fluid rounded-3" style="max-height: 120px;">
+                    <div class="bg-white rounded-circle shadow-lg mb-3 d-inline-flex justify-content-center align-items-center overflow-hidden" style="width: 150px; height: 150px; padding: 10px;">
+                        <img src="{{ asset('logo.png') }}" alt="LaundryPro Logo" class="img-fluid rounded-circle" style="width: 100%; height: 100%; object-fit: contain;">
                     </div>
                     <h2 class="fw-bold text-white mb-2" style="letter-spacing: 0.5px;">LaundryPro</h2>
                     <p class="text-white-50 small mb-0 px-2" style="max-width: 300px; line-height: 1.6;">
@@ -52,8 +52,8 @@
                                 <div class="col-12 mx-auto">
                                     <div class="text-center mb-4">
                                         <div class="d-block d-md-none mb-3">
-                                            <div class="bg-white rounded-4 p-2 shadow-sm d-inline-block" style="max-width: 100px;">
-                                                <img src="{{ asset('logo.png') }}" alt="LaundryPro Logo" class="img-fluid rounded-3" style="max-height: 60px;">
+                                            <div class="bg-white rounded-circle p-2 shadow-sm d-inline-flex justify-content-center align-items-center overflow-hidden" style="width: 72px; height: 72px;">
+                                                <img src="{{ asset('logo.png') }}" alt="LaundryPro Logo" class="img-fluid rounded-circle" style="width: 100%; height: 100%; object-fit: contain;">
                                             </div>
                                             <h4 class="fw-bold text-dark mt-2 mb-0">LaundryPro</h4>
                                         </div>

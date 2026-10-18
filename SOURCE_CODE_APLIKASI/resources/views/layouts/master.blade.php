@@ -109,9 +109,11 @@
             <!-- Logo Header -->
             <div class="logo-header" data-background-color="dark">
 
-                <a href="{{route('home')}}" class="logo">
-                    <img src="{{ asset('logo.png') }}" alt="navbar brand" height="42px"
-                        class="navbar-brand">
+                <a href="{{route('home')}}" class="logo d-flex align-items-center text-decoration-none" style="text-decoration: none;">
+                    <div class="rounded-circle bg-white d-inline-flex align-items-center justify-content-center shadow-sm overflow-hidden" style="width: 38px; height: 38px; min-width: 38px; padding: 3px;">
+                        <img src="{{ asset('logo.png') }}" alt="LaundryPro Logo" class="rounded-circle" style="width: 100%; height: 100%; object-fit: contain;">
+                    </div>
+                    <span class="text-white font-weight-bold ml-2 text-truncate" style="font-size: 1.15rem; letter-spacing: 0.5px; max-width: 130px;">LaundryPro</span>
                 </a>
                 <button class="navbar-toggler sidenav-toggler ml-auto" type="button" data-toggle="collapse"
                     data-target="collapse" aria-expanded="false" aria-label="Toggle navigation">

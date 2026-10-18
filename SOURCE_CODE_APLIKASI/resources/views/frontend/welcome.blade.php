@@ -5,8 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('icon-32.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('logo.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-icon.png') }}">
+    <link rel="manifest" href="{{ asset('manifest.json') }}">
     <title>LaundryPro - Sistem Kasir & Manajemen Laundry</title>
 
     <!-- Fonts -->
@@ -432,16 +437,14 @@
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 90vh;
-        background-image: url('images/king_bg2.jpg');
+        min-height: calc(100vh - 120px);
+        background: scroll center url('{{ asset("images/king_bg.jpg") }}');
         background-size: cover;
-        object-fit: cover;
-        /* or contain depending on what you want */
         background-position: center;
         background-repeat: no-repeat;
         text-align: center;
         margin: auto;
-        padding: 0;
+        padding: 40px 0;
     }
 
     .user:hover {
@@ -451,27 +454,29 @@
 </head>
 
 <body>
-    <div id="header" class="header navbar navbar-default navbar-fixed-top" style="background-color: #D2DFFF;">
-        <div class="container">
-            <div class="nav navbar-nav navbar-left">
-                <img src="{{ asset('logo.png') }}" alt="navbar brand" height="42px" class="navbar-brand">
-            </div>
+    <nav id="header" class="header navbar navbar-default navbar-fixed-top" style="background-color: #ffffff; border-bottom: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.06); padding: 10px 0;">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+            <a href="{{ url('/') }}" style="display: flex; align-items: center; text-decoration: none;">
+                <div class="rounded-circle bg-white shadow-sm d-inline-flex justify-content-center align-items-center overflow-hidden border" style="width: 38px; height: 38px; min-width: 38px; padding: 2px; border-radius: 50%;">
+                    <img src="{{ asset('logo.png') }}" alt="LaundryPro Logo" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%;">
+                </div>
+                <span class="text-dark font-weight-bold" style="font-size: 1.25rem; font-weight: 700; color: #1e293b; margin-left: 10px; letter-spacing: 0.5px;">LaundryPro</span>
+            </a>
             @if (Route::has('login'))
-            <div class="nav navbar-nav navbar-right">
-                <ul class="nav navbar-nav navbar-right">
-                    @auth
-                    <li> <a class="user" href="{{url('/home')}}" style="font-size:23px; text-decoration:none">Welcome,
-                            <b>{{Auth::user()->name}}</b></a>
-                    </li>
-                    @else
-                    <li><a href=" {{route('login')}}" class="btn btn-primary">Login</a>
-                    </li>
-                    @endauth
-                </ul>
+            <div>
+                @auth
+                <a href="{{ url('/home') }}" class="btn btn-primary" style="font-weight: 600; border-radius: 8px; padding: 8px 18px;">
+                    <i class="fa fa-tachometer-alt"></i> Dashboard ({{ Auth::user()->name }})
+                </a>
+                @else
+                <a href="{{ route('login') }}" class="btn btn-primary" style="font-weight: 600; border-radius: 8px; padding: 8px 22px; background-color: #1572E8; border-color: #1572E8;">
+                    <i class="fa fa-sign-in-alt"></i> Masuk Sistem
+                </a>
+                @endauth
             </div>
             @endif
         </div>
-    </div>
+    </nav>
     <!-- begin search-banner -->
     <div class="bg">
         @yield('header')
