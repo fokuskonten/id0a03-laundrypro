@@ -5,8 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Masuk - LaundryPro | FokusKonten Official</title>
-    <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-    <link rel="icon" type="image/svg+xml" href="{{ asset('favicon.svg') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('icon-32.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('logo.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-icon.png') }}">
+    <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <style>
@@ -29,7 +34,14 @@
         <div class="col-md-10 col-lg-10 col-xl-9 mx-auto">
             <div class="card flex-row border-0 shadow-lg rounded-4 overflow-hidden">
                 <!-- The image half -->
-                <div class="col-md-6 d-none d-md-flex bg-image">
+                <div class="col-md-6 d-none d-md-flex bg-image flex-column justify-content-center align-items-center text-center p-5 text-white">
+                    <div class="bg-white rounded-4 p-3 shadow-lg mb-3 d-inline-flex justify-content-center align-items-center" style="max-width: 170px;">
+                        <img src="{{ asset('logo.png') }}" alt="LaundryPro Logo" class="img-fluid rounded-3" style="max-height: 120px;">
+                    </div>
+                    <h2 class="fw-bold text-white mb-2" style="letter-spacing: 0.5px;">LaundryPro</h2>
+                    <p class="text-white-50 small mb-0 px-2" style="max-width: 300px; line-height: 1.6;">
+                        Sistem Kasir & Manajemen Laundry Profesional
+                    </p>
                 </div>
 
                 <!-- The content half -->
@@ -39,7 +51,12 @@
                             <div class="row">
                                 <div class="col-12 mx-auto">
                                     <div class="text-center mb-4">
-                                        <img src="{{ asset('logo.png') }}" alt="LaundryPro Logo" class="img-fluid mb-2" style="max-height: 60px;">
+                                        <div class="d-block d-md-none mb-3">
+                                            <div class="bg-white rounded-4 p-2 shadow-sm d-inline-block" style="max-width: 100px;">
+                                                <img src="{{ asset('logo.png') }}" alt="LaundryPro Logo" class="img-fluid rounded-3" style="max-height: 60px;">
+                                            </div>
+                                            <h4 class="fw-bold text-dark mt-2 mb-0">LaundryPro</h4>
+                                        </div>
                                         <h3 class="fw-bold text-dark mt-2">Selamat Datang!</h3>
                                         <p class="text-muted small">Masukkan kredensial untuk mengakses sistem LaundryPro</p>
                                     </div>

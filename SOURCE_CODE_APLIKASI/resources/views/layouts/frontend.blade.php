@@ -7,6 +7,13 @@
 <head>
     <meta charset="utf-8" />
     <title>@yield('title')</title>
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('icon-32.png') }}">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ asset('favicon.png') }}">
+    <link rel="icon" type="image/png" sizes="512x512" href="{{ asset('logo.png') }}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('apple-icon.png') }}">
+    <link rel="manifest" href="{{ asset('manifest.json') }}">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <meta content="" name="description" />
     <meta content="" name="author" />
